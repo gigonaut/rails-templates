@@ -52,7 +52,7 @@ rake('gems:install', :sudo => true)
 # Set up sessions, RSpec, user model, OpenID, etc, and run migrations
 rake('db:create:all')
 rake('db:sessions:create')
-generate("authlogic", "session user_session")
+generate("session", "user_session")
 rake('acts_as_taggable:db:create')
 rake('db:migrate')
 
