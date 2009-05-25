@@ -50,6 +50,7 @@ git :submodule => "init"
 rake('gems:install', :sudo => true)
 
 # Set up sessions, RSpec, user model, OpenID, etc, and run migrations
+rake('db:create:all')
 rake('db:sessions:create')
 generate("authlogic", "user session")
 rake('acts_as_taggable:db:create')
